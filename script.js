@@ -1,19 +1,16 @@
 let binary = "100101111110011001"
-let invertido = inverterArray(binary)
-let resultado = binToDec(invertido)
+let resultado = binToDec(binary)
 
-binary = binary.split("")
-
-function inverterArray(arr){
+function inverterArray(arr){   
+    arr.split("")
     let tamanhoArray = arr.length -1
     let arrayInvertido = []
     for(tamanhoArray;tamanhoArray>=0;tamanhoArray--){
         arrayInvertido.push(arr[tamanhoArray])
     }
-    return arrayInvertido
-}
-
+    return arrayInvertido}
 function binToDec(arr){
+    arr = inverterArray(arr) //aqui a funçao de inverter o numero binário
     let result = 0
     let tamanhoArr = arr.length
     for(let i=0; i<tamanhoArr;i++){
@@ -21,8 +18,6 @@ function binToDec(arr){
             result += 2**i
         }
     }
-    return result
-}
+    return result}
 
 console.log(resultado)
-
